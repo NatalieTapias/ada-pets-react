@@ -21,8 +21,7 @@ class App extends Component {
     };
     console.log(pets);
   }
-
-
+  
 
 
   render () {
@@ -39,6 +38,7 @@ class App extends Component {
         </section>
         { /* Wave 1:  Where Pet Details should appear */}
         <section className="pet-list-wrapper">
+          <PetList pets={this.state.petList}/>
           { /* Wave 1:  Where PetList should appear */}
         </section>
         <section className="new-pet-form-wrapper">

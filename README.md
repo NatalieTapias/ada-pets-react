@@ -39,12 +39,21 @@ We have already implemented some parts of this application:
 Before you start writing code, read through what's already here and make sure you understand it by answering the following questions:
 
 - How do the components relate to each other? Draw a diagram.
+  PetList "has-many" PetCard "has-a" PetDetails
+  NewPetForm
+  SearchBar  
 - How does data get from `App.js` to `PetCard.js`?
+  Via Props
 
 ### Wave 1: Viewing Details
 
 When the user clicks the `select` button of a specific `PetCard` the app should present the user with additional details on the selected pet.  Read through the provided `propTypes` attribute of the given components, **what information does that provide**?
 
+## PetCard
+-- Props:  ID(number, required), Species(string, required), Name(string, requried), About(stinrg), Location(string)
+
+## PetDetails
+-- About: Images Location Name Species
 **Questions:**
 - How will you track which, if any Pet is the currently selected Pet?  Which component will keep the state?
 - Will you need to switch a functional component to a classical component?

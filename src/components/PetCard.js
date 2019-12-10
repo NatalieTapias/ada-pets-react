@@ -9,6 +9,11 @@ import speciesEmoji from '../speciesEmoji';
 
 const PetCard = (props) => {
   const { id, name, species, about, location } = props;
+
+  onRemoveClick = () => {
+    console.log('removing a pet');
+  }
+ 
   return (
     <div className="card pet-card">
 
@@ -24,6 +29,7 @@ const PetCard = (props) => {
           type="button"
           className="btn btn-danger pet-card--remove-btn"
           aria-label="Remove"
+          onClick={onRemoveClick}
         >
           Remove
         </button>
